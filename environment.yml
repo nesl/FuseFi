@@ -1,0 +1,17 @@
+name: unifi
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pytorch=2.2.1
+  - pytorch-cuda=11.8
+  - numpy=1.26
+  - scipy=1.11
+  - scikit-learn=1.3
+  - tqdm
+  - pip
+  - pip:
+      # optional: only needed for `--wandb`
+      - wandb
