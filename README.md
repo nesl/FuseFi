@@ -1,4 +1,4 @@
-# UniFi: Combining Irregularly Sampled CSI from Diverse Communication Packets and Frequency Bands for Wi-Fi Sensing
+# FuseFi: Combining Irregularly Sampled CSI from Diverse Communication Packets and Frequency Bands for Wi-Fi Sensing
 
 Reference implementation of the time-aware DNN from **"UniFi: Combining
 Irregularly Sampled CSI from Diverse Communication Packets and Frequency Bands
@@ -10,12 +10,12 @@ Paper: <https://arxiv.org/abs/2512.22143>
 
 Existing Wi-Fi sensing systems inject high-rate probing packets (100–1000 Hz) to
 obtain uniformly sampled Channel State Information (CSI), costing 40%+ of
-communication throughput. UniFi instead learns directly from the **irregularly
+communication throughput. FuseFi instead learns directly from the **irregularly
 sampled CSI that already exists in normal communication traffic** — across data,
 management and control frames on both the 2.4 and 5 GHz bands — with no packet
 injection.
 
-UniFi has two stages:
+FuseFi has two stages:
 
 1. **CSI sanitization** (offline, MATLAB): clusters packets by PHY format,
    normalizes amplitude, aligns waveforms, removes bursty packets and optionally
@@ -30,7 +30,7 @@ UniFi has two stages:
 ## Install
 
 ```bash
-conda env create -f environment.yml && conda activate unifi
+conda env create -f environment.yml && conda activate FuseFi
 # or, into an existing environment:
 pip install -r requirements.txt
 ```
@@ -59,7 +59,7 @@ python tanenc_classification.py --niters 5 --seed-len 1
 
 ```
 src/tanenc_classification.py   train/eval loop (entry point)
-src/models.py                  enc_mtan_classif_csi = UniFi DNN,
+src/models.py                  enc_mtan_classif_csi = FuseFi DNN,
                                multiTimeAttention, CombineEmbed
 src/utils.py                   dataloaders, burst filtering / union-timeline
                                batching, normalization, evaluate_classifier
