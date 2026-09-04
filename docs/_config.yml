@@ -1,0 +1,10 @@
+# GitHub Pages config. Page text lives in index.md; styling lives in
+# _layouts/default.html. No theme and no plugins, so nothing here needs
+# maintaining.
+title: FuseFi
+description: Wi-Fi sensing from irregularly sampled communication CSI
+
+markdown: kramdown
+
+exclude:
+  - README.md
